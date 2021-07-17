@@ -1,6 +1,6 @@
 # k8s-scheduler-test
 ```bash
-kubectl apply -f manifest.yml -n kube-system
+kubectl apply -f custom-scheduler.yml -n kube-system
 kubectl create rolebinding -n kube-system crl:apiserver --role=extension-apiserver-authentication-reader --serviceaccount=kube-system:crl-scheduler
 kubectl rollout restart deployment/crl-scheduler -n kube-system
 
